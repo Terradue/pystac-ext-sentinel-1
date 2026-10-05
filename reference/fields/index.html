@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://terradue.github.io/pystac-ext-sentinel-1/reference/fields/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Sentinel-1 fields - Sentinel-1 PySTAC extension</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Sentinel-1 fields";
+        var mkdocs_page_input_path = "reference/fields.md";
+        var mkdocs_page_url = "/pystac-ext-sentinel-1/reference/fields/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Sentinel-1 PySTAC extension
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-steps/">First steps</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-to guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/install/">Install</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../how-to/use-extension/">Work with Sentinel-1 metadata</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Sentinel-1 fields</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#deprecated-fields">Deprecated fields</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#access-and-validation">Access and validation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#collection-summaries">Collection summaries</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/">Python API</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Explanation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../explanation/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../explanation/architecture/">Architecture</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Sentinel-1 PySTAC extension</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Reference</li>
+      <li class="breadcrumb-item active">Sentinel-1 fields</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Terradue/pystac-ext-sentinel-1/edit/main/docs/reference/fields.md">Edit on pystac-ext-sentinel-1</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!--
+Copyright 2026 Terradue
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<h1 id="sentinel-1-fields">Sentinel-1 fields<a class="headerlink" href="#sentinel-1-fields" title="Permanent link">&para;</a></h1>
+<p>The <a href="https://github.com/stac-extensions/sentinel-1">upstream specification</a> and <a href="https://stac-extensions.github.io/sentinel-1/v0.2.0/schema.json">v0.2.0 JSON Schema</a> define Item properties and Collection summaries. Values below are stored in Item <code>properties</code>.</p>
+<table>
+<thead>
+<tr>
+<th>STAC field</th>
+<th>Python property</th>
+<th>Python value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s1:datatake_id</code></td>
+<td><code>datatake_id</code></td>
+<td><code>str</code>, e.g. <code>"420895"</code></td>
+</tr>
+<tr>
+<td><code>s1:instrument_configuration_ID</code></td>
+<td><code>instrument_configuration_id</code></td>
+<td><code>str</code>, e.g. <code>"7"</code></td>
+</tr>
+<tr>
+<td><code>s1:orbit_source</code></td>
+<td><code>orbit_source</code></td>
+<td><code>str</code>, e.g. <code>"PREORB"</code></td>
+</tr>
+<tr>
+<td><code>s1:slice_number</code></td>
+<td><code>slice_number</code></td>
+<td><code>str</code>, e.g. <code>"17"</code></td>
+</tr>
+<tr>
+<td><code>s1:total_slices</code></td>
+<td><code>total_slices</code></td>
+<td><code>str</code>, e.g. <code>"17"</code></td>
+</tr>
+</tbody>
+</table>
+<p>At least one of these five fields must exist for schema validation, including in Collection summaries. The schema does not constrain their string contents or relate slice counts to each other.</p>
+<h2 id="deprecated-fields">Deprecated fields<a class="headerlink" href="#deprecated-fields" title="Permanent link">&para;</a></h2>
+<p>These fields remain readable and writable for compatibility. The wrapper does not automatically migrate them or emit deprecation warnings.</p>
+<table>
+<thead>
+<tr>
+<th>STAC field / Python property</th>
+<th>Python value</th>
+<th>Upstream replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s1:resolution</code> / <code>resolution</code></td>
+<td><code>str</code></td>
+<td><code>gsd</code>, raster <code>spatial_resolution</code>, or SAR <code>sar:resolution_range</code> and <code>sar:resolution_azimuth</code></td>
+</tr>
+<tr>
+<td><code>s1:product_identifier</code> / <code>product_identifier</code></td>
+<td><code>str</code></td>
+<td>Item <code>id</code> or source links such as <code>via</code> and <code>derived_from</code></td>
+</tr>
+<tr>
+<td><code>s1:product_timeliness</code> / <code>product_timeliness</code></td>
+<td><code>str</code></td>
+<td><code>product:timeliness_category</code> and <code>product:timeliness</code></td>
+</tr>
+<tr>
+<td><code>s1:processing_datetime</code> / <code>processing_datetime</code></td>
+<td><code>datetime</code></td>
+<td><code>processing:datetime</code></td>
+</tr>
+<tr>
+<td><code>s1:processing_level</code> / <code>processing_level</code></td>
+<td><code>str</code></td>
+<td><code>processing:level</code></td>
+</tr>
+<tr>
+<td><code>s1:shape</code> / <code>shape</code></td>
+<td><code>list[int]</code></td>
+<td><code>proj:shape</code></td>
+</tr>
+</tbody>
+</table>
+<p>The specification describes resolution classes <code>full</code>, <code>high</code>, and <code>medium</code>; its JSON Schema only requires a string. Shape has at least two integer elements; the schema imposes no positivity constraint or exact dimension count.</p>
+<h2 id="access-and-validation">Access and validation<a class="headerlink" href="#access-and-validation" title="Permanent link">&para;</a></h2>
+<p>All getters can return <code>None</code> for absent fields. Setters accept <code>None</code> to remove fields. <code>apply()</code> clears omitted values.</p>
+<p>Processing datetimes are serialized with PySTAC's datetime utilities and parsed back on access. Use timezone-aware datetimes. The shape setter rejects short arrays, non-integers, and booleans with <code>ValueError</code>. Other setters rely on annotations and do not provide complete schema validation. Reading a field does not rerun setter checks.</p>
+<h2 id="collection-summaries">Collection summaries<a class="headerlink" href="#collection-summaries" title="Permanent link">&para;</a></h2>
+<p><code>Sentinel1Extension.summaries(collection)</code> exposes all eleven properties. String fields use <code>list[str]</code>; <code>shape</code> uses <code>list[list[int]]</code>; <code>processing_datetime</code> uses <code>RangeSummary[datetime]</code> with serialized string bounds. Getters return <code>None</code> when the corresponding summary form is absent. Assigning <code>None</code> removes the summary.</p>
+<p>Setters replace whole summaries without aggregating Items. Summary shape values are not checked by the Item shape validator. Upstream's extension schema checks the presence of a current summary field but does not validate the values of Collection summaries.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../api/" class="btn btn-neutral float-right" title="Python API">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Terradue/pystac-ext-sentinel-1" class="fa fa-code-fork" style="color: #fcfcfc"> pystac-ext-sentinel-1</a>
+        </span>
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../api/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
